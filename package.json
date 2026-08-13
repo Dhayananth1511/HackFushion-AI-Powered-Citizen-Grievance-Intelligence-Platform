@@ -1,0 +1,14 @@
+{
+  "name": "hackfushion-root",
+  "version": "1.0.0",
+  "description": "CivicAI - Grievance Intelligence Platform",
+  "main": "server/src/app.ts",
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
