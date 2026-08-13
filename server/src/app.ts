@@ -36,11 +36,11 @@ const distFolder = fs.existsSync(clientDistPath) ? clientDistPath : fs.existsSyn
 
 if (distFolder) {
   app.use(express.static(distFolder));
-  app.get('*', (req, res, next) => {
-    if (req.path.startsWith('/api') || req.path.startsWith('/health')) {
-      return next();
+  app.use((req, res, next) => {
+    if (req.method === 'GET' && !req.path.startsWith('/api') && !req.path.startsWith('/health')) {
+      return res.sendFile(path.join(distFolder, 'index.html'));
     }
-    res.sendFile(path.join(distFolder, 'index.html'));
+    res.status(404).json({ success: false, message: 'Route not found' });
   });
 } else {
   // 404 handler for API mode only
