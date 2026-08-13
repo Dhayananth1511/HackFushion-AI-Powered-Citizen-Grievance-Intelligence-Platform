@@ -1,5 +1,4 @@
-import React from 'react';
-import type { PriorityLevel, IncidentStatus } from '../../types';
+import type { PriorityLevel } from '../../types';
 
 // ─── Button ───────────────────────────────────────────────────────────────────
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

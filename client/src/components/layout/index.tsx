@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Building2, User, Shield, ChevronDown, Bell, LayoutDashboard, FileText, AlertTriangle, Map, Cpu, ClipboardList } from 'lucide-react';
+import { Building2, User, Shield, Bell, LayoutDashboard, FileText, AlertTriangle, Map, Cpu, ClipboardList } from 'lucide-react';
 import { useAppStore } from '../../store';
-import { Button } from '../ui';
 
 // ─── Navbar ────────────────────────────────────────────────────────────────────
 export const Navbar: React.FC = () => {

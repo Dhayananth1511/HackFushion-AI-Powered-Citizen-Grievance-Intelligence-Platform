@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Cpu, Sparkles, Activity, Layers, AlertCircle, RefreshCw,
-  CheckCircle2, Zap, BarChart3, TrendingUp, Users, ShieldAlert,
-  ArrowUpRight, Clock
+  CheckCircle2, Zap, BarChart3, ShieldAlert
 } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Card, Button, StatCard } from '../../components/ui';

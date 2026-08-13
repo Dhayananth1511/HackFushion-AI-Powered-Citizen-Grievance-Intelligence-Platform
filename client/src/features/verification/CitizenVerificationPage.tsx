@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, XCircle, RefreshCw, AlertTriangle, ThumbsUp, ThumbsDown } from 'lucide-react';
+import { CheckCircle2, RefreshCw, AlertTriangle, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Button, Card } from '../../components/ui';
 import { incidentsApi } from '../../services/api';

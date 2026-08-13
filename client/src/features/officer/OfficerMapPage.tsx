@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  MapPin, Layers, Filter, Eye, AlertTriangle, Users, BarChart3,
-  Building2, CheckCircle2, Navigation, RefreshCw, X, ShieldAlert
+  MapPin, Layers, Eye,
+  Building2, Navigation, X, ShieldAlert
 } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Card, Button, PriorityBadge, StatusBadge } from '../../components/ui';
-import { useIncidentStore } from '../../store';
-import type { Incident } from '../../types';
 
 interface WardSpatialData {
   ward: string;
@@ -39,7 +37,6 @@ const MAP_PINS = [
 
 export const OfficerMapPage: React.FC = () => {
   const navigate = useNavigate();
-  const { setSelectedIncident } = useIncidentStore();
   const [selectedWard, setSelectedWard] = useState<WardSpatialData>(WARDS[0]);
   const [selectedPin, setSelectedPin] = useState<typeof MAP_PINS[0] | null>(MAP_PINS[0]);
   const [categoryFilter, setCategoryFilter] = useState<string>('all');

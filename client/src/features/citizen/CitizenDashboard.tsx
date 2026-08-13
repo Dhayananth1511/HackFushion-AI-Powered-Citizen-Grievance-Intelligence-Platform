@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FileText, CheckCircle2, Clock, AlertTriangle, Plus, MapPin, ChevronRight, RefreshCw } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Card, Button, StatCard, StatusBadge, PriorityBadge, SectionHeader } from '../../components/ui';
 import { useComplaintStore } from '../../store';
-import { complaintsApi } from '../../services/api';
 import type { Complaint } from '../../types';
 
 // Demo pre-existing complaints for this citizen
@@ -27,11 +26,9 @@ const DEMO_COMPLAINTS: Complaint[] = [
   },
 ];
 
-const WARD_OPTIONS = ['Ward 1', 'Ward 5', 'Ward 9', 'Ward 12', 'Ward 17', 'Ward 21', 'Ward 25'];
-
 export const CitizenDashboard: React.FC = () => {
   const navigate = useNavigate();
-  const { setComplaintText, setSelectedWard, setHasImage, setHasLocation, reset } = useComplaintStore();
+  const { reset } = useComplaintStore();
   const [complaints] = useState<Complaint[]>(DEMO_COMPLAINTS);
 
   const stats = {

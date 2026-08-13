@@ -6,7 +6,7 @@ import {
   Clock, CheckCircle2, Plus, Sparkles
 } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
-import { Card, Button, StatusBadge, PriorityBadge, SectionHeader, StatCard } from '../../components/ui';
+import { Card, Button, StatusBadge, PriorityBadge, StatCard } from '../../components/ui';
 import { complaintsApi } from '../../services/api';
 import { useComplaintStore } from '../../store';
 import type { Complaint } from '../../types';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mic, Camera, MapPin, Send, Globe, X, Upload, CheckCircle2, Building2 } from 'lucide-react';
+import { Mic, Camera, MapPin, Send, Globe, X, CheckCircle2, Building2 } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Button, Card } from '../../components/ui';
 import { useComplaintStore } from '../../store';

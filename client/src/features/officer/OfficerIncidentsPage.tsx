@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  AlertTriangle, CheckCircle2, Play, TrendingUp, Search, Filter,
-  ArrowUpDown, MapPin, Users, BarChart3, Building2, RefreshCw, Eye
+  AlertTriangle, CheckCircle2, Play, TrendingUp, Search,
+  MapPin, Users, BarChart3, Building2, RefreshCw, Eye
 } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Card, Button, PriorityBadge, StatusBadge, StatCard } from '../../components/ui';

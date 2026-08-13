@@ -4,7 +4,7 @@ import { AppLayout } from '../../components/layout';
 import { Card, Button, StatusBadge, PriorityBadge } from '../../components/ui';
 import { incidentsApi } from '../../services/api';
 import type { Incident } from '../../types';
-import { ArrowLeft, CheckCircle2, AlertTriangle, Play, MapPin, Users, Activity } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Play, MapPin, Users, Activity } from 'lucide-react';
 
 export const IncidentDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

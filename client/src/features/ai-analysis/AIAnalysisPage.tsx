@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, Circle, Loader2, Brain, AlertCircle, ChevronRight, Sparkles } from 'lucide-react';
+import { CheckCircle2, Loader2, Brain, AlertCircle, ChevronRight, Sparkles } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Button, Card } from '../../components/ui';
 import { useComplaintStore } from '../../store';
@@ -63,12 +63,12 @@ const STEP_DELAY = 700; // ms between each step appearing
 
 export const AIAnalysisPage: React.FC = () => {
   const navigate = useNavigate();
-  const { aiAnalysis, currentText, submittedComplaint } = useComplaintStore();
+  const { aiAnalysis, currentText } = useComplaintStore();
   const [visibleSteps, setVisibleSteps] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [phase, setPhase] = useState<'analyzing' | 'incident' | 'done'>('analyzing');
   const analysis = aiAnalysis || MOCK_ANALYSIS;
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const steps = analysis.steps;
@@ -78,7 +78,7 @@ export const AIAnalysisPage: React.FC = () => {
       current++;
       setVisibleSteps(current);
       if (current >= steps.length) {
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) clearInterval(intervalRef.current);
         setTimeout(() => setPhase('incident'), 400);
         setTimeout(() => {
           setShowResults(true);
@@ -87,7 +87,7 @@ export const AIAnalysisPage: React.FC = () => {
       }
     }, STEP_DELAY);
 
-    return () => clearInterval(intervalRef.current);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, []);
 
   return (

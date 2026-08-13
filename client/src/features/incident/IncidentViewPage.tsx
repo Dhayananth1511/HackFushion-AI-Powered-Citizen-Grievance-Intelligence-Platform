@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  AlertTriangle, MapPin, Users, BarChart3, Building2,
+  MapPin, Users, BarChart3, Building2,
   CheckCircle2, Clock, ChevronRight, Layers, TrendingUp
 } from 'lucide-react';
 import { AppLayout } from '../../components/layout';
 import { Button, Card, PriorityBadge, StatusBadge } from '../../components/ui';
-import { incidentsApi } from '../../services/api';
 import { useComplaintStore } from '../../store';
 import type { Incident } from '../../types';
 
