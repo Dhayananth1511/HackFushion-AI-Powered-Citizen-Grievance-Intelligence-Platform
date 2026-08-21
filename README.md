@@ -1,6 +1,6 @@
 # 🏛️ AI-Powered Citizen Grievance Intelligence Platform
 
-Prototype : https://hackfushion-ai-powered-citizen-grievance.onrender.com/
+Prototype : [https://hackfushion-ai-powered-citizen-grievance.onrender.com/](https://hackfushion-ai-powered-citizen-grievance-jxjc.onrender.com/)
 ( Simple Demo not end to end )
 
 > **From Citizen Complaints to Intelligent, Coordinated and Verifiable Civic Action**
